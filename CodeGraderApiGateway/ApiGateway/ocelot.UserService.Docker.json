@@ -22,7 +22,8 @@
                     "Host": "userservice",
                     "Port": 8080
                 }
-            ]
+            ],
+            "SwaggerKey": "users"
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
@@ -33,6 +34,19 @@
                 {
                     "Host": "userservice",
                     "Port": 8080
+                }
+            ],
+            "SwaggerKey": "auth"
+        }
+    ],
+    "SwaggerEndPoints": [
+        {
+            "Key": "users",
+            "Config": [
+                {
+                    "Name": "User API V1",
+                    "Version": "v1",
+                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }
             ]
         }
