@@ -3,7 +3,7 @@
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
             "UpstreamPathTemplate": "/person/{everything}",
-            "DownstreamPathTemplate": "/api/person{everything}",
+            "DownstreamPathTemplate": "/api/person/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -14,8 +14,8 @@
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
-            "UpstreamPathTemplate": "/user/{everything}",
-            "DownstreamPathTemplate": "/api/user{everything}",
+            "UpstreamPathTemplate": "/users/{everything}",
+            "DownstreamPathTemplate": "/api/users/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -27,7 +27,7 @@
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
             "UpstreamPathTemplate": "/admin/{everything}",
-            "DownstreamPathTemplate": "/api/admin{everything}",
+            "DownstreamPathTemplate": "/api/admin/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
