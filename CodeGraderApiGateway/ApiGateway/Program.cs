@@ -13,19 +13,15 @@ namespace ApiGateway
             // Add Ocelot
             builder.Configuration
                 .SetBasePath(builder.Environment.ContentRootPath)
-                .AddJsonFile($"ocelot.UserService.{builder.Environment.EnvironmentName}.json");
+                .AddJsonFile($"ocelot.UserService.{builder.Environment.EnvironmentName}.json", optional: false,reloadOnChange: true);
             builder.Services.AddOcelot(builder.Configuration);
+
             // add Swagger for Ocelot
             builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
             // Add services to the container.
 
             builder.Services.AddControllers();
-
-           
-
-
-
 
             // Add CORS để frontend có thể gọi API
             builder.Services.AddCors(options =>
@@ -53,7 +49,6 @@ namespace ApiGateway
             //}
 
             app.UseSwagger();
-            app.UseSwaggerUI();
 
             app.UseHttpsRedirection();
 

@@ -1,7 +1,7 @@
 ﻿{
     "Routes": [
         {
-            "UpstreamHttpMethod": [ "POST", "GET" ],
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/person/{everything}",
             "DownstreamPathTemplate": "/api/person/{everything}",
             "DownstreamScheme": "http",
@@ -9,6 +9,19 @@
                 {
                     "Host": "localhost",
                     "Port": 5001
+                }
+            ],
+            "SwaggerKey": "person"
+        }
+    ],
+    "SwaggerEndPoints": [
+        {
+            "Key": "person",
+            "Config": [
+                {
+                    "Name": "Person API V1",
+                    "Version": "v1",
+                    "Url": "http://localhost:5001/swagger/v1/swagger.json"
                 }
             ]
         }
