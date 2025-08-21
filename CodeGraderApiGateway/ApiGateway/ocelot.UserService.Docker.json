@@ -49,6 +49,16 @@
                     "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }
             ]
+        },
+        {
+            "Key": "auth",
+            "Config": [
+                {
+                    "Name": "auth API V1",
+                    "Version": "v1",
+                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
+                }
+            ]
         }
     ],
     "GlobalConfiguration": {
