@@ -10,7 +10,8 @@
                     "Host": "huytest",
                     "Port": 8080
                 }
-            ]
+            ],
+            "SwaggerKey": "person"
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
@@ -41,6 +42,16 @@
     ],
     "SwaggerEndPoints": [
         {
+            "Key": "person",
+            "Config": [
+                {
+                    "Name": "Person API V1",
+                    "Version": "v1",
+                    "Url": "http://huytest:8080/swagger/v1/swagger.json"
+                }
+            ]
+        },
+        {
             "Key": "users",
             "Config": [
                 {
@@ -54,7 +65,7 @@
             "Key": "auth",
             "Config": [
                 {
-                    "Name": "auth API V1",
+                    "Name": "Auth API V1",
                     "Version": "v1",
                     "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }
