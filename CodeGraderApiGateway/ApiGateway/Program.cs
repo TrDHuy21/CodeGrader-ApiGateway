@@ -17,7 +17,8 @@ namespace ApiGateway
             // Add Ocelot
             builder.Configuration
                 .SetBasePath(builder.Environment.ContentRootPath)
-                .AddOcelot(); // single ocelot.json file in read-only mode
+                .AddOcelot(builder.Environment)
+                .AddJsonFile($"ocelot.{builder.Environment.EnvironmentName}.json");
 
             builder.Services
                 .AddOcelot(builder.Configuration);

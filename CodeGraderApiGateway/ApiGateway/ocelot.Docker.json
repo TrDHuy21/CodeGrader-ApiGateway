@@ -1,0 +1,31 @@
+﻿{
+    "Routes": [
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
+            "UpstreamPathTemplate": "/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "userservice",
+                    "Port": 8080
+                }
+            ]
+        },
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
+            "UpstreamPathTemplate": "/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "huytest",
+                    "Port": 8080
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5000"
+    }
+}
