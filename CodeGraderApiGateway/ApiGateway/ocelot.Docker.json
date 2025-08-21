@@ -2,8 +2,20 @@
     "Routes": [
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
-            "UpstreamPathTemplate": "/{everything}",
-            "DownstreamPathTemplate": "/api/{everything}",
+            "UpstreamPathTemplate": "/person/{everything}",
+            "DownstreamPathTemplate": "/api/person{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "huytest",
+                    "Port": 8080
+                }
+            ]
+        },
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
+            "UpstreamPathTemplate": "/user/{everything}",
+            "DownstreamPathTemplate": "/api/user{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -14,12 +26,12 @@
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
-            "UpstreamPathTemplate": "/{everything}",
-            "DownstreamPathTemplate": "/api/{everything}",
+            "UpstreamPathTemplate": "/admin/{everything}",
+            "DownstreamPathTemplate": "/api/admin{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "huytest",
+                    "Host": "userservice",
                     "Port": 8080
                 }
             ]
