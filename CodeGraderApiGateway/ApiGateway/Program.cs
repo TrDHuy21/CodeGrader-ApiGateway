@@ -14,7 +14,6 @@ namespace ApiGateway
             builder.Configuration
                 .SetBasePath(builder.Environment.ContentRootPath)
                 .AddJsonFile($"ocelot.UserService.{builder.Environment.EnvironmentName}.json");
-            builder.Services.AddOcelot(builder.Configuration);
             // add Swagger for Ocelot
             builder.Services.AddSwaggerForOcelot(builder.Configuration);
 
