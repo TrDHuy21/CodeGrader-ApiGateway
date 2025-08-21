@@ -1,7 +1,7 @@
 ﻿{
     "Routes": [
         {
-            "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/person/{everything}",
             "DownstreamPathTemplate": "/api/person/{everything}",
             "DownstreamScheme": "http",
@@ -13,7 +13,7 @@
             ]
         },
         {
-            "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/users/{everything}",
             "DownstreamPathTemplate": "/api/users/{everything}",
             "DownstreamScheme": "http",
@@ -25,9 +25,9 @@
             ]
         },
         {
-            "UpstreamHttpMethod": [ "POST", "GET", "PUSH", "DELETE" ],
-            "UpstreamPathTemplate": "/admin/{everything}",
-            "DownstreamPathTemplate": "/api/admin/{everything}",
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/auth/{everything}",
+            "DownstreamPathTemplate": "/api/auth/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
