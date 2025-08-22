@@ -15,8 +15,8 @@
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
-            "UpstreamPathTemplate": "/users/{everything}",
-            "DownstreamPathTemplate": "/api/users/{everything}",
+            "UpstreamPathTemplate": "/user/{everything}",
+            "DownstreamPathTemplate": "/api/user/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -24,7 +24,7 @@
                     "Port": 8080
                 }
             ],
-            "SwaggerKey": "users"
+            "SwaggerKey": "user"
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
@@ -52,7 +52,7 @@
             ]
         },
         {
-            "Key": "users",
+            "Key": "user",
             "Config": [
                 {
                     "Name": "User API V1",
