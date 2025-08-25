@@ -1,0 +1,32 @@
+{
+    "Routes": [
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/problem/{everything}",
+            "DownstreamPathTemplate": "/api/problem/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "problemservice",
+                    "Port": 8080
+                }
+            ],
+            "SwaggerKey": "problem"
+        }
+    ],
+    "SwaggerEndPoints": [
+        {
+            "Key": "problem",
+            "Config": [
+                {
+                    "Name": "problem API V1",
+                    "Version": "v1",
+                    "Url": "http://problemservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5000"
+    }
+}
