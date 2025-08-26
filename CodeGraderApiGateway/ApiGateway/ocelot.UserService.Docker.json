@@ -2,19 +2,6 @@
     "Routes": [
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
-            "UpstreamPathTemplate": "/person/{everything}",
-            "DownstreamPathTemplate": "/api/person/{everything}",
-            "DownstreamScheme": "http",
-            "DownstreamHostAndPorts": [
-                {
-                    "Host": "huytest",
-                    "Port": 8080
-                }
-            ],
-            "SwaggerKey": "person"
-        },
-        {
-            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/user/{everything}",
             "DownstreamPathTemplate": "/api/user/{everything}",
             "DownstreamScheme": "http",
@@ -24,7 +11,7 @@
                     "Port": 8080
                 }
             ],
-            "SwaggerKey": "user"
+            "SwaggerKey": "user_UserService"
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
@@ -37,7 +24,7 @@
                     "Port": 8080
                 }
             ],
-            "SwaggerKey": "auth"
+            "SwaggerKey": "auth_UserService"
         },
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
@@ -50,45 +37,35 @@
                     "Port": 8080
                 }
             ],
-            "SwaggerKey": "admin"
+            "SwaggerKey": "admin_UserService"
         }
     ],
     "SwaggerEndPoints": [
         {
-            "Key": "person",
+            "Key": "user_UserService",
             "Config": [
                 {
-                    "Name": "Person API V1",
-                    "Version": "v1",
-                    "Url": "http://huytest:8080/swagger/v1/swagger.json"
-                }
-            ]
-        },
-        {
-            "Key": "user",
-            "Config": [
-                {
-                    "Name": "User API V1",
+                    "Name": "User user service API V1",
                     "Version": "v1",
                     "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }
             ]
         },
         {
-            "Key": "auth",
+            "Key": "auth_UserService",
             "Config": [
                 {
-                    "Name": "Auth API V1",
+                    "Name": "Auth user service API V1",
                     "Version": "v1",
                     "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }
             ]
         },
         {
-            "Key": "admin",
+            "Key": "admin_UserService",
             "Config": [
                 {
-                    "Name": "Admin API V1",
+                    "Name": "Admin user service API V1",
                     "Version": "v1",
                     "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }

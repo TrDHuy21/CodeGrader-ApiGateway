@@ -11,12 +11,12 @@
                     "Port": 8080
                 }
             ],
-            "SwaggerKey": "problem"
+            "SwaggerKey": "problem_ProblemService"
         }
     ],
     "SwaggerEndPoints": [
         {
-            "Key": "problem",
+            "Key": "problem_ProblemService",
             "Config": [
                 {
                     "Name": "problem API V1",
