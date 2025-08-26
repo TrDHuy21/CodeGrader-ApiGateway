@@ -38,6 +38,19 @@
                 }
             ],
             "SwaggerKey": "auth"
+        },
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/admin/{everything}",
+            "DownstreamPathTemplate": "/api/admin/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "userservice",
+                    "Port": 8080
+                }
+            ],
+            "SwaggerKey": "admin"
         }
     ],
     "SwaggerEndPoints": [
@@ -66,6 +79,16 @@
             "Config": [
                 {
                     "Name": "Auth API V1",
+                    "Version": "v1",
+                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        },
+        {
+            "Key": "admin",
+            "Config": [
+                {
+                    "Name": "Admin API V1",
                     "Version": "v1",
                     "Url": "http://userservice:8080/swagger/v1/swagger.json"
                 }
