@@ -1,6 +1,9 @@
 ﻿{
     "Routes": [
         {
+
+        },
+        {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/user/{everything}",
             "DownstreamPathTemplate": "/api/user/{everything}",
@@ -41,6 +44,9 @@
         }
     ],
     "SwaggerEndPoints": [
+        {
+
+        },
         {
             "Key": "user_UserService",
             "Config": [
