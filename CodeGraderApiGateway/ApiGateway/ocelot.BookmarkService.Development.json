@@ -1,9 +1,10 @@
 ﻿{
     "Routes": [
+        {},
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/bookmark/{everything}",
-            "DownstreamPathTemplate": "/api/bookmark/{everything}",
+            "DownstreamPathTemplate": "/api/ProblemBookmark/{everything}",
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
@@ -15,6 +16,7 @@
         }
     ],
     "SwaggerEndPoints": [
+        {},
         {
             "Key": "bookmark",
             "Config": [
