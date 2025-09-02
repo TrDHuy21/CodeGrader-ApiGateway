@@ -1,0 +1,32 @@
+﻿{
+    "Routes": [
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/bookmark/{everything}",
+            "DownstreamPathTemplate": "/api/bookmark/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004
+                }
+            ],
+            "SwaggerKey": "bookmark"
+        }
+    ],
+    "SwaggerEndPoints": [
+        {
+            "Key": "bookmark",
+            "Config": [
+                {
+                    "Name": "bookmark API V1",
+                    "Version": "v1",
+                    "Url": "http://localhost:5004/swagger/v1/swagger.json"
+                }
+            ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5000"
+    }
+}
