@@ -10,7 +10,7 @@
             "DownstreamScheme": "http",
             "DownstreamHostAndPorts": [
                 {
-                    "Host": "problemsbookmarkervice",
+                    "Host": "problembookmarkservice",
                     "Port": 8080
                 }
             ],
@@ -27,7 +27,7 @@
                 {
                     "Name": "bookmark service API V1",
                     "Version": "v1",
-                    "Url": "http://problemsbookmarkervice:8080/swagger/v1/swagger.json"
+                    "Url": "http://problembookmarkservice:8080/swagger/v1/swagger.json"
                 }
             ]
         }
