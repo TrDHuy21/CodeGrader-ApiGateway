@@ -13,6 +13,7 @@ namespace ApiGateway
             // Add Ocelot
             builder.Configuration
                 .SetBasePath(builder.Environment.ContentRootPath)
+                .AddJsonFile($"ocelot.BookmarkService.{builder.Environment.EnvironmentName}.json", optional: false,reloadOnChange: true)
                 .AddJsonFile($"ocelot.UserService.{builder.Environment.EnvironmentName}.json", optional: false,reloadOnChange: true)
                 .AddJsonFile($"ocelot.ProblemService.{builder.Environment.EnvironmentName}.json", optional: false,reloadOnChange: true);
             builder.Services.AddOcelot(builder.Configuration);
