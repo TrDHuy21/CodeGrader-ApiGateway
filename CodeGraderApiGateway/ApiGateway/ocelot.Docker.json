@@ -1,8 +1,21 @@
-﻿{
+{
     "Routes": [
+        //bookmark
         {
-
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/bookmark/{everything}",
+            "DownstreamPathTemplate": "/api/ProblemBookmark/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "problembookmarkservice",
+                    "Port": 8080
+                }
+            ],
+            "SwaggerKey": "bookmark"
         },
+
+        //user
         {
             "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
             "UpstreamPathTemplate": "/user/{everything}",
@@ -41,41 +54,21 @@
                 }
             ],
             "SwaggerKey": "admin_UserService"
-        }
-    ],
-    "SwaggerEndPoints": [
-        {
+        },
 
-        },
+        //problem
         {
-            "Key": "user_UserService",
-            "Config": [
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/problem/{everything}",
+            "DownstreamPathTemplate": "/api/problem/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
                 {
-                    "Name": "User user service API V1",
-                    "Version": "v1",
-                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
+                    "Host": "problemservice",
+                    "Port": 8080
                 }
-            ]
-        },
-        {
-            "Key": "auth_UserService",
-            "Config": [
-                {
-                    "Name": "Auth user service API V1",
-                    "Version": "v1",
-                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
-                }
-            ]
-        },
-        {
-            "Key": "admin_UserService",
-            "Config": [
-                {
-                    "Name": "Admin user service API V1",
-                    "Version": "v1",
-                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
-                }
-            ]
+            ],
+            "SwaggerKey": "problem_ProblemService"
         }
     ],
     "GlobalConfiguration": {

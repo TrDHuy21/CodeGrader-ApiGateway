@@ -1,0 +1,59 @@
+{
+    "SwaggerEndPoints": [
+        // book mark
+        {
+            "Key": "bookmark",
+            "Config": [
+                {
+                    "Name": "bookmark service API V1",
+                    "Version": "v1",
+                    "Url": "http://problembookmarkservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        },
+
+        //user
+        {
+            "Key": "user_UserService",
+            "Config": [
+                {
+                    "Name": "User user service API V1",
+                    "Version": "v1",
+                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        },
+        {
+            "Key": "auth_UserService",
+            "Config": [
+                {
+                    "Name": "Auth user service API V1",
+                    "Version": "v1",
+                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        },
+        {
+            "Key": "admin_UserService",
+            "Config": [
+                {
+                    "Name": "Admin user service API V1",
+                    "Version": "v1",
+                    "Url": "http://userservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        },
+
+        //problem
+        {
+            "Key": "problem_ProblemService",
+            "Config": [
+                {
+                    "Name": "problem API V1",
+                    "Version": "v1",
+                    "Url": "http://problemservice:8080/swagger/v1/swagger.json"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "Routes": [
+        //bookmark
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/bookmark/{everything}",
+            "DownstreamPathTemplate": "/api/ProblemBookmark/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5004
+                }
+            ],
+            "SwaggerKey": "bookmark"
+        },
+
+        //user
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/user/{everything}",
+            "DownstreamPathTemplate": "/api/user/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "SwaggerKey": "user_UserService"
+        },
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/auth/{everything}",
+            "DownstreamPathTemplate": "/api/auth/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "SwaggerKey": "auth_UserService"
+        },
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/admin/{everything}",
+            "DownstreamPathTemplate": "/api/admin/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "SwaggerKey": "admin_UserService"
+        },
+
+        //problem
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/problem/{everything}",
+            "DownstreamPathTemplate": "/api/problem/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "SwaggerKey": "problem_ProblemService"
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "https://localhost:5000"
+    }
+}
