@@ -69,6 +69,21 @@
                 }
             ],
             "SwaggerKey": "problem_ProblemService"
+        },
+
+        //ai grader
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/grading/{everything}",
+            "DownstreamPathTemplate": "/api/grading/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "aigraderservice",
+                    "Port": 8080
+                }
+            ],
+            "SwaggerKey": "ai_grader"
         }
     ],
     "GlobalConfiguration": {

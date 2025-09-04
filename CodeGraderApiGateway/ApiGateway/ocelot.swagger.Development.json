@@ -52,6 +52,18 @@
                     "Url": "http://localhost:5002/swagger/v1/swagger.json"
                 }
             ]
+        },
+
+        //ai grader
+        {
+            "Key": "ai_grader",
+            "Config": [
+                {
+                    "Name": "AI grader service API V1",
+                    "Version": "v1",
+                    "Url": "http://localhost:5005/swagger/v1/swagger.json"
+                }
+            ]
         }
     ]
 }
