@@ -64,6 +64,18 @@
                     "Url": "http://localhost:5005/swagger/v1/swagger.json"
                 }
             ]
+        },
+
+        //comment service
+        {
+            "Key": "comment_service",
+            "Config": [
+                {
+                    "Name": "comment service API V1",
+                    "Version": "v1",
+                    "Url": "http://localhost:5006/swagger/v1/swagger.json"
+                }
+            ]
         }
     ]
 }

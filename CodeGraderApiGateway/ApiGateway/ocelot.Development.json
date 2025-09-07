@@ -84,6 +84,21 @@
                 }
             ],
             "SwaggerKey": "ai_grader"
+        },
+
+        //comment
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/comment/{everything}",
+            "DownstreamPathTemplate": "/api/comment/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5006
+                }
+            ],
+            "SwaggerKey": "comment_service"
         }
     ],
     "GlobalConfiguration": {

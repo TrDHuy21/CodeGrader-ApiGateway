@@ -66,6 +66,18 @@
                     "Url": "http://aigraderservice:8080/swagger/v1/swagger.json"
                 }
             ]
+        },
+
+        //comment service
+        {
+            "Key": "comment_service",
+            "Config": [
+                {
+                    "Name": "comment service API V1",
+                    "Version": "v1",
+                    "Url": "http://commentservice:8080/swagger/v1/swagger.json"
+                }
+            ]
         }
     ]
 }
