@@ -76,6 +76,18 @@
                     "Url": "http://localhost:5006/swagger/v1/swagger.json"
                 }
             ]
+        },
+
+        //progress service
+        {
+            "Key": "progress_service",
+            "Config": [
+                {
+                    "Name": "progress service API V1",
+                    "Version": "v1",
+                    "Url": "http://localhost:5007/swagger/v1/swagger.json"
+                }
+            ]
         }
     ]
 }

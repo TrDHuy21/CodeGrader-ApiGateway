@@ -78,6 +78,18 @@
                     "Url": "http://commentservice:8080/swagger/v1/swagger.json"
                 }
             ]
+        },
+
+        //progress service
+        {
+            "Key": "progress_service",
+            "Config": [
+                {
+                    "Name": "progress service API V1",
+                    "Version": "v1",
+                    "Url": "http://progressservice:8080/swagger/v1/swagger.json"
+                }
+            ]
         }
     ]
 }

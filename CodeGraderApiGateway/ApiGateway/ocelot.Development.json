@@ -68,7 +68,8 @@
                     "Port": 5003
                 }
             ],
-            "SwaggerKey": "problem_ProblemService"
+            "SwaggerKey": "problem_ProblemService",
+            "RouteIsCaseSensitive": false
         },
 
         //ai grader
@@ -99,6 +100,21 @@
                 }
             ],
             "SwaggerKey": "comment_service"
+        },
+
+        // progress
+        {
+            "UpstreamHttpMethod": [ "POST", "GET", "PUT", "DELETE" ],
+            "UpstreamPathTemplate": "/progress/{everything}",
+            "DownstreamPathTemplate": "/api/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5007
+                }
+            ],
+            "SwaggerKey": "progress_service"
         }
     ],
     "GlobalConfiguration": {
